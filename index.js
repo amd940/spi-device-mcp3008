@@ -11,7 +11,16 @@ const defaultHz = 1350000; // See MCP3008 datasheet. 75000 * 18 = 1350000.
  * @param {Number} device  the SPI device (CE)
  * @param {[type]} speedHz SPI clock frequency with sensible default (via fivdi)
  */
-function SpiDeviceMcp3008(channel, bus = 0, device = 0, speedHz = defaultHz) {
+function SpiDeviceMcp3008(channel, bus, device, speedHz) {
+	if (bus == undefined) {
+		bus = 0;
+	}
+	if (device == undefined) {
+		device = 0;
+	}
+	if (speedHz == undefined) {
+		speedHz = defaultHz;
+	}
 	if (!Number.isInteger(channel) || channel < 0 || channel > 7) {
 		throw new RangeError(`${channel} is not a valid channel (0-7)`);
 	}
@@ -43,7 +52,7 @@ SpiDeviceMcp3008.prototype._read = function _read(mcp3008, cb) {
 	mcp3008.transfer([{
 		byteLength: 3,
 		sendBuffer: this._sendBuffer,
-		receiveBuffer: Buffer.alloc(3),
+		receiveBuffer: new Buffer(3),
 		speedHz: this.speedHz,
 	}], (err, message) => {
 		if (err) {
@@ -66,7 +75,10 @@ SpiDeviceMcp3008.prototype.read = function read() {
 	return this;
 };
 
-SpiDeviceMcp3008.prototype.poll = function poll(delay = 200) {
+SpiDeviceMcp3008.prototype.poll = function poll(delay) {
+	if (delay == undefined) {
+		delay = 200;
+	}
 	this._mcp3008
 	.then(mcp3008 => {
 		this._interval = setInterval(() =>

@@ -1,6 +1,6 @@
 **This fork is for the Raspberry Pi 1 and Zero, since they cannot run node v6 which is nesscessary for the original version of this library. Other than that, the library functions in the exact same way.**
 
-# spi-device-mcp3008
+# spi-device-mcp3008-rpi1z
 
 EventEmitter based micro-library using spi-device to access a MCP3008 on Raspberry PI and others. Based on [mcp-spi-adc][1] by [@fivdi][2]
 

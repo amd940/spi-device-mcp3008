@@ -1,4 +1,4 @@
-**This fork is for the Raspberry Pi 1 and Zero, since they cannot run node v6 which is nesscessary for the original version of this library.**
+**This fork is for the Raspberry Pi 1 and Zero, since they cannot run node v6 which is nesscessary for the original version of this library. Other than that, the library functions in the exact same way.**
 
 # spi-device-mcp3008
 

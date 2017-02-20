@@ -1,14 +1,14 @@
 {
-  "name": "spi-device-mcp3008",
+  "name": "spi-device-mcp3008-rpi1z",
   "version": "0.1.0",
-  "description": "EventEmitter based micro-library using spi-device to access a MCP3008 on Raspberry PI and others",
+  "description": "EventEmitter based micro-library using spi-device to access a MCP3008 on Raspberry Pi 1 and Zero",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pichfl/spi-device-mcp3008.git"
+	"url": "https://github.com/amd940/spi-device-mcp3008-rpi1z.git"
   },
   "keywords": [
     "raspberry",
@@ -18,12 +18,12 @@
     "mcp3008",
     "mcp"
   ],
-  "author": "Florian Pichler <fp@ylk.gd>",
+  "author": "Florian Pichler <fp@ylk.gd>, Justin Drentlaw",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pichfl/spi-device-mcp3008/issues"
+    "url": "https://github.com/amd940/spi-device-mcp3008-rpi1z/issues"
   },
-  "homepage": "https://github.com/pichfl/spi-device-mcp3008#readme",
+  "homepage": "https://github.com/amd940/spi-device-mcp3008-rpi1z",
   "dependencies": {
     "spi-device": "^0.2.3"
   }

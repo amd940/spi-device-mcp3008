@@ -8,12 +8,14 @@ This library might fail to install on other platforms!
 
 **Please note: This is provided as is and probably not properly maintained, it should work fine if you have node >= 4.**
 
+## Installation
 
+`npm install spi-device-mcp3008-rpi1z`
 
 ## Usage
 
 ```js
-    const spiDeviceMcp3008 = require('spi-device-mcp3008');
+    const spiDeviceMcp3008 = require('spi-device-mcp3008-rpi1z');
     const myMcp3008 = spiDeviceMcp3008(0, 0, 0); // channel 0 of /dev/spidev0.0
 
     myMcp3008
